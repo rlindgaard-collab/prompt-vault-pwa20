@@ -134,7 +134,7 @@ export default function App(){
                     <span className="truncate">{sec}</span>
                     {openSections[sec] ? <ChevronDown className="w-4 h-4"/> : <ChevronRight className="w-4 h-4"/>}
                   </button>
-                  {openSections[sec] and (
+                  {openSections[sec] && (
                     <div className="pl-3 mt-1">
                       {cats.map(([cat, n]) => (
                         <button key={cat} onClick={()=>{setActiveSection(sec); setCategory(cat);}} className={"w-full text-left px-3 py-1.5 rounded-lg mb-1 border " + (category===cat && activeSection===sec ? "bg-slate-900 text-white border-slate-900" : "bg-white border-slate-200 hover:bg-slate-100")}>
